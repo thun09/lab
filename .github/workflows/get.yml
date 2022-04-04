@@ -16,6 +16,6 @@ jobs:
       
     - name: run it
       run: |
-        git clone https://github.com/thun888/lab.git
+        git clone https://github.com/thun09/lab.git
         cd lab
         sh ./run.sh
